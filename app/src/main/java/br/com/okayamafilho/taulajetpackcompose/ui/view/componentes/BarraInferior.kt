@@ -16,7 +16,7 @@ import androidx.compose.material3.IconButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import br.com.okayamafilho.taulajetpackcompose.data.model.Postagem
+import br.com.okayamafilho.taulajetpackcompose.data.remote.model.Postagem
 
 @Composable
 fun BarraInferior(

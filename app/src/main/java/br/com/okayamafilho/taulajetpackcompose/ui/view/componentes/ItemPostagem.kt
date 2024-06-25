@@ -16,8 +16,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import br.com.okayamafilho.taulajetpackcompose.data.model.Destaque
-import br.com.okayamafilho.taulajetpackcompose.data.model.Postagem
+import br.com.okayamafilho.taulajetpackcompose.data.remote.model.Destaque
+import br.com.okayamafilho.taulajetpackcompose.data.remote.model.Postagem
 
 @Composable
 fun ItemPostagem(

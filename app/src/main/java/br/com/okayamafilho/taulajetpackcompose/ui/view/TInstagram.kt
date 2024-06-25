@@ -24,8 +24,8 @@ import br.com.okayamafilho.taulajetpackcompose.ui.view.componentes.AreaDestaque
 import br.com.okayamafilho.taulajetpackcompose.ui.view.componentes.AreaPostagem
 import br.com.okayamafilho.taulajetpackcompose.ui.view.componentes.BarraInferior
 import br.com.okayamafilho.taulajetpackcompose.ui.view.componentes.BarraSuperior
-import br.com.okayamafilho.taulajetpackcompose.data.model.Destaque
-import br.com.okayamafilho.taulajetpackcompose.data.model.Postagem
+import br.com.okayamafilho.taulajetpackcompose.data.remote.model.Destaque
+import br.com.okayamafilho.taulajetpackcompose.data.remote.model.Postagem
 import br.com.okayamafilho.taulajetpackcompose.ui.theme.TAulaJetpackComposeTheme
 import dagger.hilt.android.AndroidEntryPoint
 

@@ -48,7 +48,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.okayamafilho.taulajetpackcompose.R
-import br.com.okayamafilho.taulajetpackcompose.data.model.Usuario
+import br.com.okayamafilho.taulajetpackcompose.data.remote.model.Usuario
 import br.com.okayamafilho.taulajetpackcompose.ui.theme.TAulaJetpackComposeTheme
 
 class MainActivity : ComponentActivity() {

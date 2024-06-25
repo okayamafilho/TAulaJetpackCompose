@@ -4,7 +4,7 @@ import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import br.com.okayamafilho.taulajetpackcompose.data.model.Destaque
+import br.com.okayamafilho.taulajetpackcompose.data.remote.model.Destaque
 
 @Composable
 fun AreaDestaque(
