@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TAulaJetpackCompose</string>
+    <string name="title_activity_teste">TesteActivity</string>
+    <string name="title_activity_tinstagram">TInstagram</string>
+</resources>
