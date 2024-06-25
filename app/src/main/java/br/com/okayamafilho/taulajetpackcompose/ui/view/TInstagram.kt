@@ -1,4 +1,4 @@
-package br.com.okayamafilho.taulajetpackcompose
+package br.com.okayamafilho.taulajetpackcompose.ui.view
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -15,13 +15,11 @@ import androidx.compose.material3.FabPosition
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
+import br.com.okayamafilho.taulajetpackcompose.R
 import br.com.okayamafilho.taulajetpackcompose.componentes.AreaDestaque
 import br.com.okayamafilho.taulajetpackcompose.componentes.AreaPostagem
 import br.com.okayamafilho.taulajetpackcompose.componentes.BarraInferior

@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -50,6 +52,31 @@ android {
 }
 
 dependencies {
+    //https://developer.android.com/jetpack/androidx/releases/lifecycle
+
+    val lifecycle_version = "2.8.2"
+    val arch_version = "2.2.0"
+
+    //Dependências retrofit
+    implementation (libs.com.squareup.retrofit2.retrofit2)
+    implementation (libs.converter.gson)
+    implementation (libs.converter.simplexml)
+
+    // ViewModel
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    // ViewModel utilities for Compose
+    implementation(libs.androidx.lifecycle.viewmodel.compose)//viewModel()
+
+    //LiveData
+    implementation(libs.androidx.lifecycle.livedata.ktx) //observer
+    implementation(libs.androidx.runtime.livedata) //observeAsState
+
+    //Fragment KTX
+    implementation(libs.androidx.fragment.ktx)// by viewModels()
+
+    //Hilt
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.android.compiler)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -71,4 +98,9 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+}
+
+// Allow references to generated code
+kapt {
+    correctErrorTypes = true
 }

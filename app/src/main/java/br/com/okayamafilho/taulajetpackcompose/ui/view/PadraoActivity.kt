@@ -1,10 +1,11 @@
-package br.com.okayamafilho.taulajetpackcompose
+package br.com.okayamafilho.taulajetpackcompose.ui.view
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import br.com.okayamafilho.taulajetpackcompose.R
 
 class PadraoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
