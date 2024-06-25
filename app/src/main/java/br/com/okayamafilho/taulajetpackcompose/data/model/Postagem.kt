@@ -1,4 +1,4 @@
-package br.com.okayamafilho.taulajetpackcompose.model
+package br.com.okayamafilho.taulajetpackcompose.data.model
 
 data class Postagem(
     val imagemPerfilRes: Int,

@@ -1,10 +1,10 @@
-package br.com.okayamafilho.taulajetpackcompose.componentes
+package br.com.okayamafilho.taulajetpackcompose.ui.view.componentes
 
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import br.com.okayamafilho.taulajetpackcompose.model.Destaque
+import br.com.okayamafilho.taulajetpackcompose.data.model.Destaque
 
 @Composable
 fun AreaDestaque(

@@ -20,14 +20,16 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import br.com.okayamafilho.taulajetpackcompose.R
-import br.com.okayamafilho.taulajetpackcompose.componentes.AreaDestaque
-import br.com.okayamafilho.taulajetpackcompose.componentes.AreaPostagem
-import br.com.okayamafilho.taulajetpackcompose.componentes.BarraInferior
-import br.com.okayamafilho.taulajetpackcompose.componentes.BarraSuperior
-import br.com.okayamafilho.taulajetpackcompose.model.Destaque
-import br.com.okayamafilho.taulajetpackcompose.model.Postagem
+import br.com.okayamafilho.taulajetpackcompose.ui.view.componentes.AreaDestaque
+import br.com.okayamafilho.taulajetpackcompose.ui.view.componentes.AreaPostagem
+import br.com.okayamafilho.taulajetpackcompose.ui.view.componentes.BarraInferior
+import br.com.okayamafilho.taulajetpackcompose.ui.view.componentes.BarraSuperior
+import br.com.okayamafilho.taulajetpackcompose.data.model.Destaque
+import br.com.okayamafilho.taulajetpackcompose.data.model.Postagem
 import br.com.okayamafilho.taulajetpackcompose.ui.theme.TAulaJetpackComposeTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class TInstagram : ComponentActivity() {
     @OptIn(ExperimentalMaterial3Api::class)
 

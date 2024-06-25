@@ -1,4 +1,4 @@
-package br.com.okayamafilho.taulajetpackcompose.componentes
+package br.com.okayamafilho.taulajetpackcompose.ui.view.componentes
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
@@ -16,7 +16,7 @@ import androidx.compose.material3.IconButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import br.com.okayamafilho.taulajetpackcompose.model.Postagem
+import br.com.okayamafilho.taulajetpackcompose.data.model.Postagem
 
 @Composable
 fun BarraInferior(

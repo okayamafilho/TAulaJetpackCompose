@@ -2,7 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:name=".di.CustomApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -16,11 +19,6 @@
             android:name=".ui.view.MainActivity"
             android:exported="false"
             android:label="@string/title_activity_tinstagram"
-            android:theme="@style/Theme.TAulaJetpackCompose" />
-        <activity
-            android:name=".TesteActivity"
-            android:exported="false"
-            android:label="@string/title_activity_teste"
             android:theme="@style/Theme.TAulaJetpackCompose" />
         <activity
             android:name=".ui.view.PadraoActivity"
@@ -37,5 +35,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>

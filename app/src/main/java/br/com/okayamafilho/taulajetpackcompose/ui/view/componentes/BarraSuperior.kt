@@ -1,4 +1,4 @@
-package br.com.okayamafilho.taulajetpackcompose.componentes
+package br.com.okayamafilho.taulajetpackcompose.ui.view.componentes
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.material.icons.Icons

@@ -1,4 +1,4 @@
-package br.com.okayamafilho.taulajetpackcompose.componentes
+package br.com.okayamafilho.taulajetpackcompose.ui.view.componentes
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
