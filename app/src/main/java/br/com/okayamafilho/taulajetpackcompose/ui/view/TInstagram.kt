@@ -88,16 +88,16 @@ class TInstagram : ComponentActivity() {
                             BarraInferior()
                         }
                     },
-                    floatingActionButton = {
-                        FloatingActionButton(onClick = { }) {
-                            Icon(
-                                painter = painterResource(id = R.drawable.ic_add_box_24),
-                                contentDescription = null
-                            )
-                        }
-                    },
-                    floatingActionButtonPosition = FabPosition.End,
-                    modifier = Modifier.fillMaxSize()
+//                    floatingActionButton = {
+//                        FloatingActionButton(onClick = { }) {
+//                            Icon(
+//                                painter = painterResource(id = R.drawable.ic_add_box_24),
+//                                contentDescription = null
+//                            )
+//                        }
+//                    },
+//                    floatingActionButtonPosition = FabPosition.End,
+//                    modifier = Modifier.fillMaxSize()
                 ) { paddingInterno ->
                     Home(
                         Modifier.padding(paddingInterno)
