@@ -1,6 +1,8 @@
 package br.com.okayamafilho.taulajetpackcompose.di
 
 import br.com.okayamafilho.taulajetpackcompose.data.remote.api.DummyApi
+import br.com.okayamafilho.taulajetpackcompose.data.remote.repository.IUsuarioRepository
+import br.com.okayamafilho.taulajetpackcompose.data.remote.repository.UsuarioRepositoryImpl
 import br.com.okayamafilho.taulajetpackcompose.utils.Constantes
 import dagger.Module
 import dagger.Provides
@@ -24,4 +26,10 @@ object AppModule {
     fun provideDummyAPI(retrofit: Retrofit): DummyApi {
         return retrofit.create(DummyApi::class.java)
     }
+
+    @Provides
+    fun provideUsuarioRepository(dummyApi: DummyApi): IUsuarioRepository {
+        return UsuarioRepositoryImpl(dummyApi)
+    }
+
 }

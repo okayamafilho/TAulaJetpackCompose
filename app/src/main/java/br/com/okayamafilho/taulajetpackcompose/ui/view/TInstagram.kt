@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -16,9 +17,12 @@ import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.lifecycle.viewmodel.compose.viewModel
 import br.com.okayamafilho.taulajetpackcompose.R
 import br.com.okayamafilho.taulajetpackcompose.ui.view.componentes.AreaDestaque
 import br.com.okayamafilho.taulajetpackcompose.ui.view.componentes.AreaPostagem
@@ -27,6 +31,7 @@ import br.com.okayamafilho.taulajetpackcompose.ui.view.componentes.BarraSuperior
 import br.com.okayamafilho.taulajetpackcompose.data.remote.model.Destaque
 import br.com.okayamafilho.taulajetpackcompose.data.remote.model.Postagem
 import br.com.okayamafilho.taulajetpackcompose.ui.theme.TAulaJetpackComposeTheme
+import br.com.okayamafilho.taulajetpackcompose.viewmodel.UsuarioViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -60,6 +65,13 @@ class TInstagram : ComponentActivity() {
         Postagem(R.drawable.perfil_01, "Rosane", R.drawable.praia, "Descricao da imagem da praia"),
         Postagem(R.drawable.perfil_01, "Rosa", R.drawable.carro, "Descricao do carro F1"),
     )
+
+    private val usuarioViewModel: UsuarioViewModel by viewModels()
+
+    override fun onStart() {
+        super.onStart()
+        usuarioViewModel.recuperarUsuarios()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -97,13 +109,16 @@ class TInstagram : ComponentActivity() {
 
     @Composable
     fun Home(modifier: Modifier = Modifier) {
+//        val usuarioViewModelCompose = viewModel(modelClass = UsuarioViewModel::class.java)
+        val listaUsuarios by usuarioViewModel.usuarios.observeAsState(initial = emptyList())
+
         Column(
             modifier = modifier.fillMaxWidth()
         ) {
             //Área de destaque
             //Postagens
 //            AreaDestaque(listaDestaques, Modifier.padding(9.dp))
-            AreaDestaque(listaDestaques)
+            AreaDestaque(listaUsuarios = listaUsuarios)
             Divider()
             AreaPostagem(listaPostagens)
         }
